@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .link {
+    @apply hover:underline;
+  }
+
+  .button {
+    @apply inline-flex space-x-2 border border-white px-4 py-2 font-semibold uppercase transition duration-300 ease-linear hover:border-neutral-600;
+  }
+}

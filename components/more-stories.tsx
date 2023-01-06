@@ -7,10 +7,10 @@ export default function MoreStories() {
     <>
       <div className="flex items-center justify-between py-8">
         <h3 className="text-2xl font-bold">More Stories</h3>
-        <div className="inline-flex">
+        <Link href="/archive" className="button">
           <p>View All</p>
           <IconChevronRight />
-        </div>
+        </Link>
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {meta.map((s, index) => (
