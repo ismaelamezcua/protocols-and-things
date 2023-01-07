@@ -12,7 +12,7 @@ export default function Navbar() {
           <Link href="/">
             <p className="font-bold">
               Protocols
-              <span className="text-neutral-500">&amp;</span>
+              <span className="text-rose-600">&amp;</span>
               Things
             </p>
           </Link>
