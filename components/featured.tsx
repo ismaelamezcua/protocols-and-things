@@ -19,8 +19,8 @@ export default function Featured() {
           </Link>
           <div className="flex flex-col justify-center">
             <div className="inline-flex space-x-4">
-              {f.tags.map((t) => (
-                <Link href={`/tags/${t}`}>
+              {f.tags.map((t, index) => (
+                <Link href={`/tags/${t}`} key={index}>
                   <Badge>{t}</Badge>
                 </Link>
               ))}
