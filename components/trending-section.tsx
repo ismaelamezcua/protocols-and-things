@@ -21,8 +21,11 @@ export default function TrendingSection() {
     },
   ];
 
-  const renderEntries = entries.map((entry) => (
-    <div className="flex flex-row items-center justify-between border-t border-black py-8">
+  const renderEntries = entries.map((entry, index) => (
+    <div
+      className="flex flex-row items-center justify-between border-t border-black py-8"
+      key={index}
+    >
       <div className="max-w-xl">
         <p className="text-red-400">
           <Link href={`/tags/${entry.tag}`}>{entry.tag}</Link>
@@ -38,8 +41,8 @@ export default function TrendingSection() {
     </div>
   ));
 
-  const gridType = entries.map((e) => (
-    <div className="container">
+  const gridType = entries.map((e, index) => (
+    <div className="container" key={index}>
       <img src={e.thumb} alt={e.title} className="w-full" />
       <h3 className="text-2xl font-bold">{e.title}</h3>
       <p className="text-neutral-800">{e.description}</p>
