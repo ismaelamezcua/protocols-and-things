@@ -16,7 +16,7 @@ const meta: MetaInfo[] = [
     title: "This is the first post.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada egestas risus quis varius. Mauris malesuada finibus laoreet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-    tags: ["Programming"],
+    tags: ["Programming", "Protocols"],
     image: {
       url: "https://picsum.photos/300/400/",
       alt: "Image description of the first post",

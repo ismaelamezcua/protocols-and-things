@@ -1,12 +1,14 @@
 import Link from "next/link";
 import meta from "../lib/_meta";
+import { IconChevronRight } from "@tabler/icons";
+import Badge from "./badge";
 
 export default function Featured() {
   const f = meta[0];
 
   return (
     <>
-      <div className="container">
+      <div className="group container my-16">
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8">
           <Link href={`/posts/${f.slug}`}>
             <img
@@ -16,8 +18,14 @@ export default function Featured() {
             />
           </Link>
           <div className="flex flex-col justify-center">
-            <p className="text-rose-600">Protocols</p>
-            <Link href={`/posts/${f.slug}`}>
+            <div className="inline-flex space-x-4">
+              {f.tags.map((t) => (
+                <Link href={`/tags/${t}`}>
+                  <Badge>{t}</Badge>
+                </Link>
+              ))}
+            </div>
+            <Link href={`/posts/${f.slug}`} className="link">
               <h1 className="text-4xl font-bold">{f.title}</h1>
             </Link>
             <p>
